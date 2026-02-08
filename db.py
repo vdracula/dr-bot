@@ -25,7 +25,6 @@ def get_conn():
 
 # ... остальной код без изменений
 
-
 def init_db():
     conn = get_conn()
     cur = conn.cursor()
