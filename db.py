@@ -11,11 +11,19 @@ def get_conn():
         from psycopg2.extras import RealDictCursor
         return psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
     else:
-        # SQLite локально
+        # SQLite: локально или в /data на Amvera
         import sqlite3
-        conn = sqlite3.connect("birthdays.db")
+        # Если на Amvera (есть /data), используем его, иначе локальный путь
+        if os.path.exists("/data"):
+            db_file = "/data/birthdays.db"
+        else:
+            db_file = "birthdays.db"
+        
+        conn = sqlite3.connect(db_file)
         conn.row_factory = sqlite3.Row
         return conn
+
+# ... остальной код без изменений
 
 
 def init_db():
