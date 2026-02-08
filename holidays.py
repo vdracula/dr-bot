@@ -8,7 +8,6 @@ import requests
 RUS_CALENDAR_BASE = os.getenv("RUS_CALENDAR_BASE", "https://russian-calendar.example.com/api")
 HOLIDAYS_ENDPOINT = f"{RUS_CALENDAR_BASE}/holidays"
 
-
 def get_today_holidays():
     """
     Russian Calendar API, фильтрация по сегодняшней дате.
