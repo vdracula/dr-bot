@@ -74,7 +74,6 @@ async def send_congrats_for_chat(context: ContextTypes.DEFAULT_TYPE, chat_id: in
         disable_web_page_preview=True,
     )
 
-
 async def scheduler_tick(context: ContextTypes.DEFAULT_TYPE):
     now = datetime.now()
     now_h = now.hour
