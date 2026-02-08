@@ -32,4 +32,3 @@ def get_today_holidays():
         if item.get("date") == today and "holidayName" in item
     ]
     return holidays_today
-
