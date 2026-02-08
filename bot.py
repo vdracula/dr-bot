@@ -67,7 +67,6 @@ def main():
     app.add_handler(CommandHandler("disable", disable_cmd))
     app.add_handler(CommandHandler("time", time_cmd))
     app.add_handler(CommandHandler("debug_holidays", debug_holidays_cmd))
-    app.add_handler(CommandHandler("whoami", debug_me_cmd))
     logger.info("Bot starting...")
     app.run_polling()
 
